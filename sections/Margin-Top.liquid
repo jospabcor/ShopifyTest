@@ -1,0 +1,26 @@
+
+<div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }} style="margin-top: {{section.settings.Margen | append: "px"}};">
+  <span>{{ block.settings.text | escape }}</span>
+ </div>
+{% schema %}
+  {
+    "name": "Margen arriba",
+    "settings": [
+		{
+        "id":"Margen",
+        "type":"text",
+        "label":"margen de arriba"
+    }
+	],
+	"presets":[{
+		"name":"Margen Arriba"
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

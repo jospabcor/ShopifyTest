@@ -2,6 +2,13 @@
  .containerMySection{
    display:flex;
  }
+ 
+ .beatleContainer{
+  display:flex;
+  gap:10px;
+ }
+
+ 
 {% endstyle %}
 {% assign beatles = "John, Paul, George, Ringo" | split: ", " %}
 {% assign newBeat = beatles | slice: 0,2 %}
@@ -20,8 +27,12 @@
 </div>
 <div>
 {% for beatle in newBeat %}
-  <p>{{ beatle }}</p>
+  <div class="beatleContainer">
+    <p>number {{forloop.index}}: </p>
+      <p> {{ beatle }}</p>
+  </div>
     {% endfor %}
+  
 </div>
 
 

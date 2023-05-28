@@ -20,8 +20,7 @@
   {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            {%render 'extension-miSeccion'
-            
+            {%render 'extension-miSeccion',
             textHeading: block.settings.heading
             
             %}
